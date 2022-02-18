@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { select, Store } from '@ngrx/store';
+import { Store } from '@ngrx/store';
 import { AppState } from '../store/app.state';
 import { GameActions, GameSelectors } from '../store/game';
 import { Game } from '../models/game';
@@ -13,10 +13,6 @@ export class GameFacade {
 
   loadGames() {
     this.store$.dispatch(GameActions.loadGames());
-  }
-
-  getGames(): Observable<Game[]> {
-    return this.store$.select(GameSelectors.getAllGames);
   }
 
   getGamesByCategory(category: string): Observable<Game[]> {

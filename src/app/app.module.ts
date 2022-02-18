@@ -5,17 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { GamesPageComponent } from './pages/games-page/games-page.component';
+import { GamesListComponent } from './components/games-list/games-list.component';
 import { StoreModule } from '@ngrx/store';
 import { reducers } from './store/app.reducer';
 import { effects } from './store/app.effect';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
-import { GameComponent } from './pages/games-page/game/game.component';
+import { GameComponent } from './components/game/game.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, GamesPageComponent, GameComponent],
+  declarations: [AppComponent, NavbarComponent, GamesListComponent, GameComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

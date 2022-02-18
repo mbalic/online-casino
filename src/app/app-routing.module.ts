@@ -1,57 +1,58 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GamesPageComponent } from './pages/games-page/games-page.component';
+import { GamesListComponent } from './components/games-list/games-list.component';
 
 const routes: Routes = [
   {
-    path: ':type',
-    component: GamesPageComponent,
+    path: 'top',
+    component: GamesListComponent,
+    data: { title: 'Top games' },
   },
-  // {
-  //   path: 'new',
-  //   component: GamesPageComponent,
-  //   data: { title: 'New games' },
-  // },
-  // {
-  //   path: 'slots',
-  //   component: GamesPageComponent,
-  //   data: { title: 'Slots' },
-  // },
-  // {
-  //   path: 'jackpots',
-  //   component: GamesPageComponent,
-  //   data: { title: 'Jackpots' },
-  // },
-  // {
-  //   path: 'live',
-  //   component: GamesPageComponent,
-  //   data: { title: 'Live' },
-  // },
-  // {
-  //   path: 'blackjack',
-  //   component: GamesPageComponent,
-  //   data: { title: 'Blackjack' },
-  // },
-  // {
-  //   path: 'roulette',
-  //   component: GamesPageComponent,
-  //   data: { title: 'Roulett' },
-  // },
-  // {
-  //   path: 'table',
-  //   component: GamesPageComponent,
-  //   data: { title: 'Table' },
-  // },
-  // {
-  //   path: 'poker',
-  //   component: GamesPageComponent,
-  //   data: { title: 'Poker' },
-  // },
-  // {
-  //   path: 'other',
-  //   component: GamesPageComponent,
-  //   data: { title: 'Other' },
-  // },
+  {
+    path: 'new',
+    component: GamesListComponent,
+    data: { title: 'New games' },
+  },
+  {
+    path: 'slots',
+    component: GamesListComponent,
+    data: { title: 'Slots' },
+  },
+  {
+    path: 'jackpots',
+    component: GamesListComponent,
+    data: { title: 'Jackpots' },
+  },
+  {
+    path: 'live',
+    component: GamesListComponent,
+    data: { title: 'Live' },
+  },
+  {
+    path: 'blackjack',
+    component: GamesListComponent,
+    data: { title: 'Blackjack' },
+  },
+  {
+    path: 'roulette',
+    component: GamesListComponent,
+    data: { title: 'Roulett' },
+  },
+  {
+    path: 'table',
+    component: GamesListComponent,
+    data: { title: 'Table' },
+  },
+  {
+    path: 'poker',
+    component: GamesListComponent,
+    data: { title: 'Poker' },
+  },
+  {
+    path: 'other',
+    component: GamesListComponent,
+    data: { title: 'Other' },
+  },
   {
     path: '',
     redirectTo: 'top',
