@@ -2,14 +2,10 @@ import { AppState } from '../app.state';
 import { createSelector } from '@ngrx/store';
 import { Category } from 'src/app/enums/category.enum';
 
-const expenseNoticeState = (state: AppState) => state.game;
-
-export const getAllGames = createSelector(expenseNoticeState, (state) =>
-  state.games === undefined ? null : state.games
-);
+const gameState = (state: AppState) => state.game;
 
 export const getGamesByCategory = (category: string) =>
-  createSelector(expenseNoticeState, (state) => {
+  createSelector(gameState, (state) => {
     if (state.games === undefined) {
       return null;
     }

@@ -1,7 +1,9 @@
 <div class="game">
+  <app-ribbon [isTop]="isTop" [isNew]="isNew"></app-ribbon>
   <img src="{{ game?.image }}" />
   <div class="overlay">
     <label class="game-name">{{ game?.name }}</label>
+    <label *ngIf="game?.jackpot > 0" class="game-name">{{ game?.jackpot }}</label>
     <button>Play</button>
   </div>
 </div>

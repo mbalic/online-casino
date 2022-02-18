@@ -1,8 +1,11 @@
+@import '../styles/colors';
+
 .main-container {
-  max-height: 100vh;
+  height: 100vh;
   max-width: 100vw;
+  background-color: $gray;
 }
 
 .content {
-  margin: 20px 10%;
+  margin: 35px 10%;
 }

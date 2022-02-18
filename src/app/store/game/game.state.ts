@@ -1,6 +1,5 @@
-import { Game } from 'src/app/models/game';
+import { GameData } from 'src/app/models/game';
 
 export interface GameState {
-  games: Game[];
-  loading: boolean;
+  games: GameData[];
 }

@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { AppState } from '../store/app.state';
 import { GameActions, GameSelectors } from '../store/game';
-import { Game } from '../models/game';
+import { GameData } from '../models/game';
 
 @Injectable({
   providedIn: 'root',
@@ -15,7 +15,11 @@ export class GameFacade {
     this.store$.dispatch(GameActions.loadGames());
   }
 
-  getGamesByCategory(category: string): Observable<Game[]> {
+  getGamesByCategory(category: string): Observable<GameData[]> {
     return this.store$.select(GameSelectors.getGamesByCategory(category));
+  }
+
+  loadJackpots() {
+    this.store$.dispatch(GameActions.loadJackpots());
   }
 }

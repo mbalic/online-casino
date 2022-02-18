@@ -4,26 +4,27 @@ import { GameState } from './game.state';
 
 const initialState: GameState = {
   games: undefined,
-  loading: false,
 };
 
 const gameReducer = createReducer(
   initialState,
-  on(GameActions.loadGames, (state) => {
-    const newState = { ...state } as GameState;
-    newState.loading = true;
-    return newState;
-  }),
   on(GameActions.loadGamesSuccess, (state, { games }) => {
     const newState = { ...state } as GameState;
-    newState.loading = false;
     newState.games = games;
 
     return newState;
   }),
-  on(GameActions.loadGamesError, (state, payload) => {
+  on(GameActions.loadJackpotsSuccess, (state, { jackpots }) => {
     const newState = { ...state } as GameState;
-    newState.loading = false;
+    let newGames = [...newState.games];
+    jackpots.forEach((p) => {
+      let index = newState.games.findIndex((q) => q.id === p.game);
+      let game = { ...newState.games[index] };
+      game.jackpot = game.jackpot + p.amount;
+      newGames[index] = game;
+    });
+
+    newState.games = newGames;
     return newState;
   })
 );

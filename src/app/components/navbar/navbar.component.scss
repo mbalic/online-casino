@@ -1,10 +1,5 @@
 @import '../../../styles/colors';
 
-.navbar {
-  padding: 10px 20px;
-  background-color: $dark;
-}
-
 .top-menu {
   background-color: $dark;
   text-align: center;
@@ -15,6 +10,7 @@
   justify-content: space-around;
   align-items: center;
   color: $gray;
+  font: Bold 16px Open Sans;
 }
 
 .menu-link {

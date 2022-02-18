@@ -1,10 +1,16 @@
 @import '../../../styles/colors';
 
+:host {
+  background-color: $gray;
+}
+
 .game {
   text-align: center;
   position: relative;
   width: 250px;
   height: 155px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
 
   img {
     width: 100%;
@@ -25,14 +31,19 @@
     }
   }
 
-  &:hover .overlay {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    background-color: $gray;
-    opacity: 0.9;
-    z-index: 1;
+  &:hover {
+    .overlay {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      background-color: $gray;
+      opacity: 0.9;
+      z-index: 1;
+    }
+    app-ribbon {
+      display: none;
+    }
   }
 }

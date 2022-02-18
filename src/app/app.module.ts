@@ -13,9 +13,10 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { GameComponent } from './components/game/game.component';
+import { RibbonComponent } from './components/ribbon/ribbon.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, GamesListComponent, GameComponent],
+  declarations: [AppComponent, NavbarComponent, GamesListComponent, GameComponent, RibbonComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
