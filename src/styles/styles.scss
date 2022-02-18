@@ -1,0 +1,12 @@
+@import 'colors';
+
+html {
+  height: 100vh;
+}
+
+body {
+  margin: 0px;
+  background-color: $gray;
+  font: 14px/24px;
+  height: 100vh;
+}
