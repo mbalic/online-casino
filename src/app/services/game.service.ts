@@ -9,7 +9,7 @@ import { Game } from '../models/game';
 export class GameService {
   constructor(private http: HttpClient) {}
 
-  loadAllGames(): Observable<Game> {
-    return this.http.get<Game>('/api/games');
+  loadAllGames(): Observable<Game[]> {
+    return this.http.get<Game[]>('/api/games');
   }
 }

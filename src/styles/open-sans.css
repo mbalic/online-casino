@@ -1,0 +1,26 @@
+﻿/* open-sans-regular - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  /*src: url('../fonts/open-sans-v17-latin-regular.eot');*/ /* IE9 Compat Modes */
+  src: url('../assets/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+/* open-sans-600 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  /*src: url('../fonts/open-sans-v17-latin-600.eot');*/ /* IE9 Compat Modes */
+  src: url('../assets/fonts/OpenSans-SemiBold.ttf') format('truetype');
+}
+
+/* open-sans-700 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  /*src: url('../fonts/open-sans-v17-latin-700.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/OpenSans-Bold.ttf') format('truetype');
+}
