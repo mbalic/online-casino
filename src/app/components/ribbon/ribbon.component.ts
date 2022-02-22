@@ -9,7 +9,7 @@ export class RibbonComponent implements OnInit {
   @Input() isTop: boolean;
   @Input() isNew: boolean;
 
-  isTopAndNew: boolean;
+  isTopAndNew: boolean = false;
 
   constructor() {}
 

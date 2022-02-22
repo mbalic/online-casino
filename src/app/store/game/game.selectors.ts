@@ -6,8 +6,8 @@ const gameState = (state: AppState) => state.game;
 
 export const getGamesByCategory = (category: string) =>
   createSelector(gameState, (state) => {
-    if (state.games === undefined) {
-      return null;
+    if (!state?.games) {
+      return [];
     }
 
     if (category === Category.Other) {

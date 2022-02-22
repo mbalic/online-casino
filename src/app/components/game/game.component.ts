@@ -11,17 +11,19 @@ export class GameComponent implements OnInit {
   @Input() game: GameData;
   @Input() currentCategory: string;
 
-  isTopAndNew: boolean;
-  isTop: boolean;
-  isNew: boolean;
+  isTopAndNew: boolean = false;
+  isTop: boolean = false;
+  isNew: boolean = false;
 
   constructor() {}
 
   ngOnInit() {
     this.isTop =
-      this.currentCategory !== Category.Top && this.game.categories.includes(Category.Top);
+      this.currentCategory !== Category.Top && this.game?.categories.includes(Category.Top);
+
     this.isNew =
-      this.currentCategory !== Category.New && this.game.categories.includes(Category.New);
+      this.currentCategory !== Category.New && this.game?.categories.includes(Category.New);
+
     this.isTopAndNew = this.isTop && this.isNew;
   }
 }
