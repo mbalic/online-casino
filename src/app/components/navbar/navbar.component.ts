@@ -12,6 +12,12 @@ export class NavbarComponent implements OnInit {
     this.navbarOpen = !this.navbarOpen;
   }
 
+  activateLink() {
+    if (this.navbarOpen) {
+      this.navbarOpen = false;
+    }
+  }
+
   constructor() {}
 
   ngOnInit() {}

@@ -20,7 +20,8 @@ const gameReducer = createReducer(
     jackpots.forEach((p) => {
       let index = newState.games.findIndex((q) => q.id === p.game);
       let game = { ...newState.games[index] };
-      game.jackpot = game.jackpot + p.amount;
+      // game.jackpot = game.jackpot + p.amount; -> this would be if we want to sum values from each api call
+      game.jackpot = p.amount;
       newGames[index] = game;
     });
 
