@@ -1,32 +1,39 @@
-<div class="top-menu">
-  <div class="menu-link" routerLinkActive="active" [routerLink]="['/top']">
-    <div class="menu-link-text">Top Games</div>
+<nav class="navbar navbar-expand-md navbar-dark navbar-container p-0">
+  <button class="navbar-toggler" (click)="toggleNavbar()" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" [ngClass]="{ show: navbarOpen }" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item" routerLinkActive="active" [routerLink]="['/top']">
+        <a class="nav-link">Top games</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" [routerLink]="['/new']">
+        <a class="nav-link">New games</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" [routerLink]="['/slots']">
+        <a class="nav-link">Slots</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" [routerLink]="['/jackpots']">
+        <a class="nav-link">Jackpots</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" [routerLink]="['/live']">
+        <a class="nav-link">Live</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" [routerLink]="['/blackjack']">
+        <a class="nav-link">Blackjack</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" [routerLink]="['/roulette']">
+        <a class="nav-link">Roulette</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" [routerLink]="['/table']">
+        <a class="nav-link">Table</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" [routerLink]="['/poker']">
+        <a class="nav-link">Poker</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active" [routerLink]="['/other']">
+        <a class="nav-link">Other</a>
+      </li>
+    </ul>
   </div>
-  <div class="menu-link" routerLinkActive="active" [routerLink]="['/new']">
-    <div class="menu-link-text">New Games</div>
-  </div>
-  <div class="menu-link" routerLinkActive="active" [routerLink]="['/slots']">
-    <div class="menu-link-text">Slots</div>
-  </div>
-  <div class="menu-link" routerLinkActive="active" [routerLink]="['/jackpots']">
-    <div class="menu-link-text">Jackpots</div>
-  </div>
-  <div class="menu-link" routerLinkActive="active" [routerLink]="['/live']">
-    <div class="menu-link-text">Live</div>
-  </div>
-  <div class="menu-link" routerLinkActive="active" [routerLink]="['/blackjack']">
-    <div class="menu-link-text">Blackjack</div>
-  </div>
-  <div class="menu-link" routerLinkActive="active" [routerLink]="['/roulette']">
-    <div class="menu-link-text">Roulette</div>
-  </div>
-  <div class="menu-link" routerLinkActive="active" [routerLink]="['/table']">
-    <div class="menu-link-text">Table</div>
-  </div>
-  <div class="menu-link" routerLinkActive="active" [routerLink]="['/poker']">
-    <div class="menu-link-text">Poker</div>
-  </div>
-  <div class="menu-link" routerLinkActive="active" [routerLink]="['/other']">
-    <div class="menu-link-text">Other</div>
-  </div>
-</div>
+</nav>

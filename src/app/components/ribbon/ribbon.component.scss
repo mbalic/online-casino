@@ -1,8 +1,8 @@
 @import '../../../styles/colors';
 
 .ribbon {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   overflow: hidden;
   position: absolute;
   z-index: 10;
@@ -19,7 +19,7 @@
   position: absolute;
   display: block;
   width: 230px;
-  padding: 5px 0;
+  // padding: 5px 0;
   background-color: $green;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   color: $white;
@@ -40,10 +40,10 @@
 }
 .ribbon-top-left::before {
   top: 0;
-  right: 61px;
+  right: 73px;
 }
 .ribbon-top-left::after {
-  bottom: 61px;
+  bottom: 73px;
   left: 0;
 }
 .ribbon-top-left span {
@@ -63,10 +63,10 @@
 }
 .ribbon-top-right::before {
   top: 0;
-  left: 61px;
+  left: 73px;
 }
 .ribbon-top-right::after {
-  bottom: 61px;
+  bottom: 73px;
   right: 0;
 }
 .ribbon-top-right span {
