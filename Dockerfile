@@ -26,5 +26,8 @@ COPY "./nginx/." "/etc/nginx/"
 COPY ./dist/online-casino /usr/share/nginx/html
 
 # Expose port 80
-EXPOSE 80 443
+EXPOSE 80
+
+# run nginx
+CMD ["nginx", "-g", "daemon off;"]
 

@@ -3,7 +3,7 @@ import { GameActions } from '.';
 import { GameState } from './game.state';
 
 const initialState: GameState = {
-  games: [],
+  games: null,
   loading: false,
 };
 
