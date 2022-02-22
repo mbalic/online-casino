@@ -14,9 +14,17 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { GameComponent } from './components/game/game.component';
 import { RibbonComponent } from './components/ribbon/ribbon.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, GamesListComponent, GameComponent, RibbonComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    GamesListComponent,
+    GameComponent,
+    RibbonComponent,
+    SpinnerComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

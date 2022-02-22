@@ -20,3 +20,5 @@ export const getGamesByCategory = (category: string) =>
       return state.games.filter((i) => i.categories.includes(category));
     }
   });
+
+export const isLoading = createSelector(gameState, (state) => state.loading);

@@ -11,6 +11,7 @@ import { GameData } from 'src/app/models/game';
 })
 export class GamesListComponent implements OnInit {
   games$: Observable<GameData[]>;
+  isLoading$: Observable<boolean>;
   category: string;
 
   constructor(private gameFacade: GameFacade, private router: Router) {}
@@ -20,5 +21,6 @@ export class GamesListComponent implements OnInit {
     this.category = this.router.url.substring(1);
 
     this.games$ = this.gameFacade.getGamesByCategory(this.category);
+    this.isLoading$ = this.gameFacade.isLoading();
   }
 }

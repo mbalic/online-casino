@@ -1,4 +1,5 @@
-<div class="games-list">
+<app-spinner *ngIf="isLoading$ | async"></app-spinner>
+<div class="games-list" *ngIf="(isLoading$ | async) === false">
   <div class="game-item" *ngFor="let game of games$ | async">
     <app-game [game]="game" [currentCategory]="category"></app-game>
   </div>

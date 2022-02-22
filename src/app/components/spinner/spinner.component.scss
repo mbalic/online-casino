@@ -1,0 +1,16 @@
+@import '../../../styles/colors';
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin-top: 25%;
+
+  .spinner-border {
+    height: 50px;
+    width: 50px;
+    color: $green;
+  }
+}

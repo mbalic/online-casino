@@ -19,6 +19,10 @@ export class GameFacade {
     return this.store$.select(GameSelectors.getGamesByCategory(category));
   }
 
+  isLoading(): Observable<boolean> {
+    return this.store$.select(GameSelectors.isLoading);
+  }
+
   loadJackpots() {
     this.store$.dispatch(GameActions.loadJackpots());
   }
