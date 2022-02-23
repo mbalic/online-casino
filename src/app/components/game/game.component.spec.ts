@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import { StoreModule } from '@ngrx/store';
+
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
@@ -11,9 +13,9 @@ describe('GameComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GameComponent ]
-    })
-    .compileComponents();
+      declarations: [GameComponent],
+      imports: [StoreModule.forRoot({}, {})],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

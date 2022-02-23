@@ -4,14 +4,17 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { GamesListComponent } from './games-list.component';
+import { StoreModule } from '@ngrx/store';
+import { RouterTestingModule } from '@angular/router/testing';
 
-describe('GamesPageComponent', () => {
+describe('GamesListComponent', () => {
   let component: GamesListComponent;
   let fixture: ComponentFixture<GamesListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [GamesListComponent],
+      imports: [RouterTestingModule, StoreModule.forRoot({}, {})],
     }).compileComponents();
   }));
 
