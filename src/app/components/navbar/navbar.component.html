@@ -8,82 +8,82 @@
         class="nav-item"
         routerLinkActive="active"
         (click)="activateLink()"
-        [routerLink]="['/top']"
+        [routerLink]="[Category.Top]"
       >
-        <a class="nav-link">Top games</a>
+        <a class="nav-link">{{ PAGE_TITLES.topGames }}</a>
       </li>
 
       <li
         class="nav-item"
         routerLinkActive="active"
         (click)="activateLink()"
-        [routerLink]="['/new']"
+        [routerLink]="[Category.New]"
       >
-        <a class="nav-link">New games</a>
+        <a class="nav-link">{{ PAGE_TITLES.newGames }}</a>
       </li>
       <li
         class="nav-item"
         routerLinkActive="active"
         (click)="activateLink()"
-        [routerLink]="['/slots']"
+        [routerLink]="[Category.Slots]"
       >
-        <a class="nav-link">Slots</a>
+        <a class="nav-link">{{ PAGE_TITLES.slots }}</a>
       </li>
       <li
         class="nav-item"
         routerLinkActive="active"
         (click)="activateLink()"
-        [routerLink]="['/jackpots']"
+        [routerLink]="[Category.Jackpots]"
       >
-        <a class="nav-link">Jackpots</a>
+        <a class="nav-link">{{ PAGE_TITLES.jackpots }}</a>
       </li>
       <li
         class="nav-item"
         routerLinkActive="active"
         (click)="activateLink()"
-        [routerLink]="['/live']"
+        [routerLink]="[Category.Live]"
       >
-        <a class="nav-link">Live</a>
+        <a class="nav-link">{{ PAGE_TITLES.live }}</a>
       </li>
       <li
         class="nav-item"
         routerLinkActive="active"
         (click)="activateLink()"
-        [routerLink]="['/blackjack']"
+        [routerLink]="[Category.Blackjack]"
       >
-        <a class="nav-link">Blackjack</a>
+        <a class="nav-link">{{ PAGE_TITLES.blackjack }}</a>
       </li>
       <li
         class="nav-item"
         routerLinkActive="active"
         (click)="activateLink()"
-        [routerLink]="['/roulette']"
+        [routerLink]="[Category.Roulette]"
       >
-        <a class="nav-link">Roulette</a>
+        <a class="nav-link">{{ PAGE_TITLES.roulette }}</a>
       </li>
       <li
         class="nav-item"
         routerLinkActive="active"
         (click)="activateLink()"
-        [routerLink]="['/table']"
+        [routerLink]="[Category.Table]"
       >
-        <a class="nav-link">Table</a>
+        <a class="nav-link">{{ PAGE_TITLES.table }}</a>
       </li>
       <li
         class="nav-item"
         routerLinkActive="active"
         (click)="activateLink()"
-        [routerLink]="['/poker']"
+        [routerLink]="[Category.Poker]"
       >
-        <a class="nav-link">Poker</a>
+        <a class="nav-link">{{ PAGE_TITLES.poker }}</a>
       </li>
       <li
         class="nav-item"
         routerLinkActive="active"
         (click)="activateLink()"
-        [routerLink]="['/other']"
+        [routerLink]="[Category.Other]"
       >
-        <a class="nav-link">Other</a>
+        <a class="nav-link">{{ PAGE_TITLES.other }}</a>
       </li>
     </ul>
   </div>

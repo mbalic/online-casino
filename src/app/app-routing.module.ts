@@ -1,66 +1,68 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GamesListComponent } from './components/games-list/games-list.component';
+import { PAGE_TITLES } from './constants/page-title.constants';
+import { Category } from 'src/app/enums/category.enum';
 
 const routes: Routes = [
   {
-    path: 'top',
+    path: Category.Top,
     component: GamesListComponent,
-    data: { title: 'Top games' },
+    data: { title: PAGE_TITLES.topGames },
   },
   {
-    path: 'new',
+    path: Category.New,
     component: GamesListComponent,
-    data: { title: 'New games' },
+    data: { title: PAGE_TITLES.newGames },
   },
   {
-    path: 'slots',
+    path: Category.Slots,
     component: GamesListComponent,
-    data: { title: 'Slots' },
+    data: { title: PAGE_TITLES.slots },
   },
   {
-    path: 'jackpots',
+    path: Category.Jackpots,
     component: GamesListComponent,
-    data: { title: 'Jackpots' },
+    data: { title: PAGE_TITLES.jackpots },
   },
   {
-    path: 'live',
+    path: Category.Live,
     component: GamesListComponent,
-    data: { title: 'Live' },
+    data: { title: PAGE_TITLES.live },
   },
   {
-    path: 'blackjack',
+    path: Category.Blackjack,
     component: GamesListComponent,
-    data: { title: 'Blackjack' },
+    data: { title: PAGE_TITLES.blackjack },
   },
   {
-    path: 'roulette',
+    path: Category.Roulette,
     component: GamesListComponent,
-    data: { title: 'Roulett' },
+    data: { title: PAGE_TITLES.roulette },
   },
   {
-    path: 'table',
+    path: Category.Table,
     component: GamesListComponent,
-    data: { title: 'Table' },
+    data: { title: PAGE_TITLES.table },
   },
   {
-    path: 'poker',
+    path: Category.Poker,
     component: GamesListComponent,
-    data: { title: 'Poker' },
+    data: { title: PAGE_TITLES.poker },
   },
   {
-    path: 'other',
+    path: Category.Other,
     component: GamesListComponent,
-    data: { title: 'Other' },
+    data: { title: PAGE_TITLES.other },
   },
   {
     path: '',
-    redirectTo: 'top',
+    redirectTo: Category.Top,
     pathMatch: 'full',
   },
   {
     path: '**',
-    redirectTo: 'top',
+    redirectTo: Category.Top,
     pathMatch: 'full',
   },
 ];
