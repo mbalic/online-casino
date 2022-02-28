@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { GameFacade } from 'src/app/facades/game.facade';
 import { GameData } from 'src/app/models/game';
@@ -14,13 +14,14 @@ export class GamesListComponent implements OnInit {
   isLoading$: Observable<boolean>;
   category: string;
 
-  constructor(private gameFacade: GameFacade, private router: Router) {}
+  constructor(private gameFacade: GameFacade, private route: ActivatedRoute) {}
 
   ngOnInit() {
-    // Get category from url
-    this.category = this.router.url.substring(1);
+    this.route.params.subscribe((p) => {
+      this.category = p['category'];
+      this.games$ = this.gameFacade.getGamesByCategory(this.category);
+    });
 
-    this.games$ = this.gameFacade.getGamesByCategory(this.category);
     this.isLoading$ = this.gameFacade.isLoading();
   }
 }

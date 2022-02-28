@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { PAGE_TITLES } from 'src/app/constants/page-title.constants';
-import { Category } from 'src/app/enums/category.enum';
+import { Component, Input } from '@angular/core';
+import { CategoryModel } from 'src/app/models/category';
 
 @Component({
   selector: 'app-navbar',
@@ -8,9 +7,9 @@ import { Category } from 'src/app/enums/category.enum';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
+  @Input() categories: CategoryModel[];
+
   navbarOpen: boolean = false;
-  PAGE_TITLES = PAGE_TITLES;
-  Category = Category;
 
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;

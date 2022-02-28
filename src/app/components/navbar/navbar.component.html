@@ -6,84 +6,12 @@
     <ul class="navbar-nav">
       <li
         class="nav-item"
+        *ngFor="let category of categories"
         routerLinkActive="active"
         (click)="activateLink()"
-        [routerLink]="[Category.Top]"
+        [routerLink]="category.url"
       >
-        <a class="nav-link">{{ PAGE_TITLES.topGames }}</a>
-      </li>
-
-      <li
-        class="nav-item"
-        routerLinkActive="active"
-        (click)="activateLink()"
-        [routerLink]="[Category.New]"
-      >
-        <a class="nav-link">{{ PAGE_TITLES.newGames }}</a>
-      </li>
-      <li
-        class="nav-item"
-        routerLinkActive="active"
-        (click)="activateLink()"
-        [routerLink]="[Category.Slots]"
-      >
-        <a class="nav-link">{{ PAGE_TITLES.slots }}</a>
-      </li>
-      <li
-        class="nav-item"
-        routerLinkActive="active"
-        (click)="activateLink()"
-        [routerLink]="[Category.Jackpots]"
-      >
-        <a class="nav-link">{{ PAGE_TITLES.jackpots }}</a>
-      </li>
-      <li
-        class="nav-item"
-        routerLinkActive="active"
-        (click)="activateLink()"
-        [routerLink]="[Category.Live]"
-      >
-        <a class="nav-link">{{ PAGE_TITLES.live }}</a>
-      </li>
-      <li
-        class="nav-item"
-        routerLinkActive="active"
-        (click)="activateLink()"
-        [routerLink]="[Category.Blackjack]"
-      >
-        <a class="nav-link">{{ PAGE_TITLES.blackjack }}</a>
-      </li>
-      <li
-        class="nav-item"
-        routerLinkActive="active"
-        (click)="activateLink()"
-        [routerLink]="[Category.Roulette]"
-      >
-        <a class="nav-link">{{ PAGE_TITLES.roulette }}</a>
-      </li>
-      <li
-        class="nav-item"
-        routerLinkActive="active"
-        (click)="activateLink()"
-        [routerLink]="[Category.Table]"
-      >
-        <a class="nav-link">{{ PAGE_TITLES.table }}</a>
-      </li>
-      <li
-        class="nav-item"
-        routerLinkActive="active"
-        (click)="activateLink()"
-        [routerLink]="[Category.Poker]"
-      >
-        <a class="nav-link">{{ PAGE_TITLES.poker }}</a>
-      </li>
-      <li
-        class="nav-item"
-        routerLinkActive="active"
-        (click)="activateLink()"
-        [routerLink]="[Category.Other]"
-      >
-        <a class="nav-link">{{ PAGE_TITLES.other }}</a>
+        <a class="nav-link">{{ category.name }}</a>
       </li>
     </ul>
   </div>
