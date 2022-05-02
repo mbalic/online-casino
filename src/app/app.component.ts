@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { interval } from 'rxjs';
-import { filter, map, mergeMap } from 'rxjs/operators';
+import { getAllCategories } from './constants/category.contants';
 import { GameFacade } from './facades/game.facade';
+import { CategoryModel } from './models/category';
 
 @Component({
   selector: 'app-root',
@@ -11,36 +10,17 @@ import { GameFacade } from './facades/game.facade';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  constructor(
-    private router: Router,
-    private activatedRoute: ActivatedRoute,
-    private titleService: Title,
-    private gameFacade: GameFacade
-  ) {}
+  categories: CategoryModel[];
+
+  constructor(private gameFacade: GameFacade) {}
 
   ngOnInit(): void {
-    this.setPageTitle();
     this.loadData();
   }
 
-  setPageTitle() {
-    this.router.events
-      .pipe(
-        filter((event) => event instanceof NavigationEnd),
-        map(() => this.activatedRoute),
-        map((route) => {
-          while (route.firstChild) route = route.firstChild;
-          return route;
-        }),
-        filter((route) => route.outlet === 'primary'),
-        mergeMap((route) => route.data)
-      )
-      .subscribe((event) => {
-        this.titleService.setTitle(`${event['title']} - Online casino`);
-      });
-  }
-
   loadData() {
+    this.categories = getAllCategories();
+
     this.gameFacade.loadGames();
 
     interval(3000).subscribe(() => {

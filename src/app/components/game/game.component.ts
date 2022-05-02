@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Category } from 'src/app/enums/category.enum';
+import { Category } from 'src/app/constants/category.contants';
 import { GameData } from 'src/app/models/game';
 
 @Component({
@@ -19,10 +19,10 @@ export class GameComponent implements OnInit {
 
   ngOnInit() {
     this.isTop =
-      this.currentCategory !== Category.Top && this.game?.categories.includes(Category.Top);
+      this.currentCategory !== Category.Top.url && this.game?.categories.includes(Category.Top.url);
 
     this.isNew =
-      this.currentCategory !== Category.New && this.game?.categories.includes(Category.New);
+      this.currentCategory !== Category.New.url && this.game?.categories.includes(Category.New.url);
 
     this.isTopAndNew = this.isTop && this.isNew;
   }
